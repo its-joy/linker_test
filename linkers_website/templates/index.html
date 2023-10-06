@@ -1,0 +1,96 @@
+<!-- Inherit contents of template-->
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+
+
+{% block content %}
+
+<header class="masthead bg-primary text-white text-center">
+
+    <div class="container d-flex align-items-center flex-column">
+
+        <!-- Masthead Avatar Image-->
+
+        <!-- Masthead Heading-->
+
+        <h1 class="masthead-heading text-uppercase mb-0 main-heading">WELCOME</h1>
+
+        <!-- Icon Divider-->
+
+        <div class="divider-custom divider-light">
+
+            <div class="divider-custom-line"></div>
+
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+
+            <div class="divider-custom-line"></div>
+
+        </div>
+
+        <!-- Masthead Subheading-->
+
+        <p class="masthead-subheading font-weight-light mb-0 secondary-text">The purpose of "Linked" is to help future iGEM teams - or anyone else who may find this useful - identify linkers that match the characteristics they require. We found current technologies to have poor interfaces and results that were unhelpful for our purposes, so we made our own! In this web app, we ask you to specify the characteristics you're looking for, and we will provide you with the top three linkers from our database that match those characteristics. With these linkers, we will provide detailed information on their hydrophobicity, flexibility, and past usage in fusion proteins. Happy Linking!</p>
+
+    </div>
+
+</header>
+
+
+{% include 'form.html' %}
+<header class="masthead bg-primary text-white text-center">
+
+    <div class="container d-flex align-items-center flex-column">
+
+        <!-- Masthead Avatar Image-->
+
+        <!-- Masthead Heading-->
+
+        <h1 class="masthead-heading text-uppercase mb-0 main-heading">Functions</h1>
+
+        <!-- Icon Divider-->
+
+        <div class="divider-custom divider-light">
+
+            <div class="divider-custom-line"></div>
+
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+
+            <div class="divider-custom-line"></div>
+
+        </div>
+
+        <!-- Masthead Subheading-->
+
+        <div class="row">
+            <!-- First column for the two types of linkers -->
+            <div class="col-lg-6">
+                <h3 class="text-center secondary-heading">Flexibility Calculator</h3>
+                <p>
+                    Our flexibility calculator utilizes DynaMine, an online API tool, to predict protein backbone dynamics solely from sequence data. It assesses how flexible or rigid specific protein regions are without requiring complex 3D structural information. By submitting a protein sequence, our tool calculates linker sequence backbone dynamics efficiently.
+                </p>
+                <p>
+                    This approach provides quick preliminary insights into protein characteristics, reducing computational demands compared to molecular dynamics. DynaMine predicts residue-level backbone flexibility using N-H S^2 order parameter values, indicating atomic bond vector movement restriction. The algorithm is trained on values derived from experimentally measured NMR chemical shifts, effectively distinguishing structural differences within proteins.
+                </p>
+                <p>
+                    For reference, the parameter values below 0.69 indicating flexibility, above 0.8 suggesting rigidity, and values in between signifying context-dependent characteristics, dependent on environmental conditions.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="text-center secondary-heading">Hydrophicity Calculator</h3>
+                <p class="text-white text-center lead">
+                    They are artificial linkers designed by researchers. They are gathered from literatures, paper, and patent search.
+                </p>
+            </div>
+        </div>
+
+</header>
+
+
+
+
+{% endblock %}
